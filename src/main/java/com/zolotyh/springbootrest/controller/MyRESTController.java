@@ -40,6 +40,7 @@ public class MyRESTController {
 
     @DeleteMapping("/employees/{id}")
     public String deleteEmployee(@PathVariable int id) {
+
         employeeService.deleteEmployee(id);
         return "Employee with ID = " + id + " was deleted";
     }
